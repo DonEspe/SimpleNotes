@@ -11,6 +11,7 @@
 		FEA9AC2829AAC11100C404E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA9AC2729AAC11100C404E3 /* ContentView.swift */; };
 		FEA9AC2A29AAC11400C404E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA9AC2929AAC11400C404E3 /* Assets.xcassets */; };
 		FEA9AC2D29AAC11400C404E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA9AC2C29AAC11400C404E3 /* Preview Assets.xcassets */; };
+		FEA9AC3729AACC9600C404E3 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FEA9AC3629AACC9600C404E3 /* KeychainAccess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		FEA9AC2929AAC11400C404E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEA9AC2C29AAC11400C404E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FEA9AC2E29AAC11400C404E3 /* SimpleNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleNotes.entitlements; sourceTree = "<group>"; };
+		FEA9AC3429AAC63C00C404E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA9AC3729AACC9600C404E3 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +55,7 @@
 		FEA9AC2429AAC11100C404E3 /* SimpleNotes */ = {
 			isa = PBXGroup;
 			children = (
+				FEA9AC3429AAC63C00C404E3 /* Info.plist */,
 				FEA9AC2529AAC11100C404E3 /* SimpleNotesApp.swift */,
 				FEA9AC2729AAC11100C404E3 /* ContentView.swift */,
 				FEA9AC2929AAC11400C404E3 /* Assets.xcassets */,
@@ -85,6 +89,9 @@
 			dependencies = (
 			);
 			name = SimpleNotes;
+			packageProductDependencies = (
+				FEA9AC3629AACC9600C404E3 /* KeychainAccess */,
+			);
 			productName = SimpleNotes;
 			productReference = FEA9AC2229AAC11100C404E3 /* SimpleNotes.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +120,9 @@
 				Base,
 			);
 			mainGroup = FEA9AC1929AAC11100C404E3;
+			packageReferences = (
+				FEA9AC3529AACC9600C404E3 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = FEA9AC2329AAC11100C404E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,6 +284,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleNotes/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +313,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleNotes/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FEA9AC3529AACC9600C404E3 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEA9AC3629AACC9600C404E3 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEA9AC3529AACC9600C404E3 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FEA9AC1A29AAC11100C404E3 /* Project object */;
 }
